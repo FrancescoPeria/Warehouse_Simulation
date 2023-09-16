@@ -18,7 +18,7 @@ The inventory built for a specific product is influenced by:
 
 Main assumptions:
 - I assumed the replenishment period R to be deterministic
-- I assumed actual sales as a proxy of the demand. This means that everything is produced is exactly sold. This assumption allows me to understand the exact relation between the replenishment period R and the fill rate of the warehouse. In fact it's possible to introduce a "sales forecast" as a proxy of demand, but this implies that the inventory produced is also increased by the forecast error
+- I assumed actual sales as a proxy of the demand. This means that everything is produced is exactly sold. This assumption allows me to understand the exact relation between the replenishment period R and the fill rate of the warehouse. In fact it's possible to introduce a "sales forecast" as a proxy of demand, but this leads to an unesired growth in the stock level due to the forecast error.
 
-The inventory is simulated code by code. Since no optimal sequence is first provided, a Monte Carlo Simulation has been used to put together the inventory of all the codes. In fact I forced every product to start the simulation at a random timestamp and then I summed up the inventory for all the codes day by day.
-I performed this experiment multiple times obtaining different warehouse stock evolutions. By taking the average result it's possible to see how the production frequency and the demand for each code influences the total inventory built overtime
+The inventory pattern is then simulated code by code. Since no optimal sequence is first provided, a Monte Carlo Simulation has been used to put together the inventory of all the codes. In fact I forced every product to start the simulation at a random timestamp and then I summed up the inventory for all the codes day-by-day.
+I performed this experiment multiple times obtaining different warehouse stock evolutions. By taking the average result it's possible to see how the production frequency and the demand for each code influences the total inventory built overtime.
