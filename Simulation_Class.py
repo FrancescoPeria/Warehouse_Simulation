@@ -20,13 +20,23 @@ def write_results(path, text):
 #--------------------------------------------------------------------------
 
 class Product:
+       
     
-    """ Classe che ha l'obiettivo di rappresentare un prodotto nelle sue principali variabili come
-    code, name, productivity, sales, ecc.. R sarebbe l'intervallo di replenishment ovvero ogni quanto
-    un prodotto dovrebbe essere realizzato. Nota la differenza tra daily_sold e demand:
-    - daily_sold sono con campionamento giornaliero ed indicano il ventuto day by day
-    - demand è quello che uso per impostare i parametri della simulazione e ha campionamento settimanale
-    - potrei scegliere che demand sono sales_odrers weekly oppure dei sold weekly"""
+    """" This class replresents a generic product whose inventory cycle is simulated.
+    R is the replenishment interval, which refers to the average span of time between two
+    consecutive productions of the same product.
+    demand is the weekly series according to which the inventory is built. Thus it can be 
+    a sales forecast, a sales order or simply a sale. 
+    For simplicity I assumed that the demand which drives the inventory plan is equal to the actual sales
+    and so everything is produced is also sold. 
+    Of course this is a strong assumption that doesn't exist in the real world, since the inventory is
+    usually based on a forecast, that lead to a forecast error and so to an efficiency in the planning process.
+    Any inefficiency leads to an higher warehouse fill rate.
+    But the aim of this model is just to link the replenishment frequency of many codes to the warehouse 
+    fill rate day by day.
+    The same class could be slightly modified to deal with other more realistic assumptions that of course
+    create inefficiencies in the planning process (es. forecast error) and so increase the overall stock level.
+    """
     
     def __init__(self, code, name, line, productivity, cases_PAL, stacking, demand, R, daily_sold):
         self.code = code # int
