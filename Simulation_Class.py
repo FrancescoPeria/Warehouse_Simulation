@@ -22,7 +22,7 @@ def write_results(path, text):
 class Product:
        
     
-    """" This class replresents a generic product whose inventory cycle is simulated.
+    """" This class represents a generic product whose inventory cycle is simulated.
     R is the replenishment interval, which refers to the average span of time between two
     consecutive productions of the same product.
     demand is the weekly series according to which the inventory is built. Thus it can be 
