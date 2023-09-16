@@ -13,7 +13,7 @@ These are the attributes used to model the instance "product":
 
 The scope of this project is to model the evolution of the warehouse overtime, as a consequence of the production of different codes.
 The inventory built for a specific product is influenced by:
-- The time interval (replenishment period) until next production
+- The time interval (replenishment period R) until next production
 - The estimated demand in that time interval
 
 Main assumptions:
